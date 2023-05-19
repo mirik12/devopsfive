@@ -1,0 +1,11 @@
+| Filename                | Prompt                                              | Description                                                 | Example                 |
+|-------------------------|-----------------------------------------------------|-------------------------------------------------------------|-------------------------|
+| app.yaml                | Create a YAML manifest for a Kubernetes Pod.        | Defines a basic Pod resource.                               | app.yaml                |
+| app-livenessProbe.yaml  | Add a liveness probe to the Pod.                    | Configures a liveness probe for the Pod.                    | app-livenessProbe.yaml  |
+| app-readinessProbe.yaml | Add a readiness probe to the Pod.                   | Configures a readiness probe for the Pod.                   | app-readinessProbe.yaml |
+| app-volumeMounts.yaml   | Define volume mounts for the Pod.                   | Mounts volumes into the containers of the Pod.              | app-volumeMounts.yaml   |
+| app-cronjob.yaml        | Create a CronJob resource.                          | Defines a CronJob to schedule jobs on a cron-like schedule. | app-cronjob.yaml        |
+| app-job-rsync.yaml      | Create a Job resource for rsync operation.          | Defines a Job to perform rsync operation.                   | app-job-rsync.yaml      |
+| app-multicontainer.yaml | Create a Pod with multiple containers.              | Defines a Pod with multiple containers.                     | app-multicontainer.yaml |
+| app-resources.yaml      | Configure resource limits and requests for the Pod. | Sets resource limits and requests for the Pod.              | app-resources.yaml      |
+| app-secret-env.yaml     | Use a Secret to set environment variables.          | Retrieves values from a Secret as environment variables.    | app-secret-env.yaml     |
