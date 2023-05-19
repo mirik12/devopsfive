@@ -1,44 +1,8 @@
 apiVersion: v1
-kind: Service
+kind: Pod
 metadata:
-  name: app-service
+  name: my-pod
 spec:
-  selector:
-    app: app
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 8080
-  type: ClusterIP
-
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: app-deployment
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: app
-  template:
-    metadata:
-      labels:
-        app: app
-    spec:
-      containers:
-        - name: app-container
-          image: your-image:tag
-          ports:
-            - containerPort: 8080
-          env:
-            - name: ENV_VAR1
-              value: value1
-            - name: ENV_VAR2
-              value: value2
-          volumeMounts:
-            - name: data-volume
-              mountPath: /data
-      volumes:
-        - name: data-volume
-          emptyDir: {}
+  containers:
+  - name: my-container
+    image: nginx:latest
